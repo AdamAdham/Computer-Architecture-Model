@@ -1,6 +1,6 @@
-﻿**Faculty of Media Engineering and Technology  ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.001.png)Computer Systems Architecture – CSEN601**  
+﻿**Faculty of Media Engineering and Technology  ![](ReadMe-Images/ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.001.png)Computer Systems Architecture – CSEN601**  
 
-***Project ![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.002.png)General Description ![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.003.png)***
+***Project ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.002.png)General Description ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.003.png)***
 
 ***Project Overview*** 
 
@@ -20,7 +20,7 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
 
 2) **Memory Size**: 2048 \* 32 ![ref1]
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.005.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.005.png)
 
 - The main memory addresses are from 0 to (2^11) - 1 (0 to 2047). 
 - Each memory block (row) contains 1 word which is 32 bits (4 bytes). 
@@ -53,7 +53,7 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
 3) Instruction Count: 12 
 - The opcodes are from 0 to 11 according to the instructions order in the following table: 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.009.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.009.png)
 
 - SLL and SRL: R3 will be 0 in the instruction format. 
 
@@ -76,7 +76,7 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
   - 7 + (6 ∗ 2) = 19 clock cycles 
 - You are required to understand the pattern in the example and implement it. ![ref1]
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.010.jpeg)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.010.jpeg)
 
 - The pattern is as follows: 
 - You fetch an instruction every 2 clock cycles starting from clock cycle 1. 
@@ -95,7 +95,7 @@ Package 2: Double McHarvard with cheese circular shifts *Memory Architecture*
 
 2) Instruction Memory Size: 1024 \* 16 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.011.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.011.png)
 
 - The instruction memory addresses are from 0 to 2^10 − 1 (0 to 1023). 
 - Each memory block (row) contains 1 word which is 16 bits (2 bytes). 
@@ -103,7 +103,7 @@ Package 2: Double McHarvard with cheese circular shifts *Memory Architecture*
 - The program instructions are stored in the instruction memory ![ref1]
 3) Data Memory Size: 2048 \* 8 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.012.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.012.png)
 
 - The data memory addresses are from 0 to 2^11 − 1 (0 to 2047). 
 - Each memory block (row) contains 1 word which is 8 bits (1 byte). 
@@ -115,7 +115,7 @@ Package 2: Double McHarvard with cheese circular shifts *Memory Architecture*
   - Names: R0 to R63 
 - 1 Status Register 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.013.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.013.png)
 
 - Name: SREG 
 - A status register, flag register, or condition code register (CCR) is a collection of status flag bits for a processor. 
@@ -157,16 +157,16 @@ the flags, you are required to keep Bits7:5 cleared “0” at all times in the 
 1) Instruction Size: 16 bits 
 1) Instruction Types: 2 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.014.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.014.png)
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.015.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.015.png)
 
 3) Instruction Count: 12 
 - The opcodes are from 0 to 11 according to the instructions order in the following 
 
 table: 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.016.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.016.png)
 
 “||” symbol indicates concatenation (0100 || 1100 = 01001100). 
 
@@ -193,7 +193,7 @@ Moreover, it performs any memory access required by the current instruction. For
   - 3 + (6 ∗ 1) = 9 clock cycles 
 - You are required to understand the pattern in the example and implement it. 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.017.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.017.png)
 
 Package 3: Fillet-O-Neumann with moves on the side *Memory Architecture* 
 
@@ -201,7 +201,7 @@ Package 3: Fillet-O-Neumann with moves on the side *Memory Architecture*
 - Von Neumann Architecture is a digital computer architecture whose design is based on the concept of stored program computers where program data and instruction data are stored in the same memory. 
 2) Memory Size: 2048 \* 32 ![ref1]
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.018.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.018.png)
 
 - The main memory addresses are from 0 to 2^11 − 1 (0 to 2047). 
 - Each memory block (row) contains 1 word which is 32 bits (4 bytes). 
@@ -234,7 +234,7 @@ Package 3: Fillet-O-Neumann with moves on the side *Memory Architecture*
 3) Instruction Count: 12 
 - The opcodes are from 0 to 11 according to the instructions order in the following table: ![ref1]
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.019.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.019.png)
 
 - MOVI: R2 will be 0 in the instruction format. 
 
@@ -265,12 +265,12 @@ Back writes this result back to the register file.
 
 2) Pipeline: 4 instructions (maximum) running in parallel 
 - **Instruction Fetch (IF)** and **Memory (MEM)** can not be done in parallel since they access the same physical memory.
-- At a given clock cycle, you can either have the **IF**, **ID**, **EX**, **WB** stages active, or the **ID**, **EX**, **MEM**, **WB** stages active.![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.020.png)
+- At a given clock cycle, you can either have the **IF**, **ID**, **EX**, **WB** stages active, or the **ID**, **EX**, **MEM**, **WB** stages active.![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.020.png)
 - Number of clock cycles: 7 + ((n − 1) ∗ 2), where n = number of instructions
 - Imagine a program with 7 instructions: 7 + (6 ∗ 2) = 19 clock cycles
 - You are required to understand the pattern in the example and implement it.
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.021.jpeg)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.021.jpeg)
 
 - The pattern is as follows: 
 - You fetch an instruction every 2 clock cycles starting from clock cycle 1. 
@@ -286,7 +286,7 @@ Package 4: Double Big Harvard combo large arithmetic shifts *Memory Architecture
    1. Harvard Architecture is the digital computer architecture whose design is based on the concept where there are separate storage and separate buses (signal path) for instruction and data. It was basically developed to overcome the bottleneck of Von Neumann Architecture. 
 1) Instruction Memory Size: 1024 \* 16 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.022.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.022.png)
 
 - The instruction memory addresses are from 0 to 2^10 − 1 (0 to 1023). 
 - Each memory block (row) contains 1 word which is 16 bits (2 bytes). 
@@ -294,7 +294,7 @@ Package 4: Double Big Harvard combo large arithmetic shifts *Memory Architecture
 - The program instructions are stored in the instruction memory 
 3) Data Memory Size: 2048 \* 8 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.023.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.023.png)
 
 - The data memory addresses are from 0 to 2^11 − 1 (0 to 2047). 
 - Each memory block (row) contains 1 word which is 8 bits (1 byte). 
@@ -306,7 +306,7 @@ Package 4: Double Big Harvard combo large arithmetic shifts *Memory Architecture
   - Names: R0 to R63 
 - 1 Status Register 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.024.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.024.png)
 
 - Name: SREG 
 - A status register, flag register, or condition code register (CCR) is a collection of status flag bits for a processor. 
@@ -347,14 +347,14 @@ sign. Overflow never occurs when adding operands with different signs.
 1) Instruction Size: 16 bits 
 1) Instruction Types: 2 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.025.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.025.png)
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.026.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.026.png)
 
 3) Instruction Count: 12 
 - The opcodes are from 0 to 11 according to the instructions order in the following table: 
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.027.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.027.png)
 
 “||” symbol indicates concatenation (0100 || 1100 = 01001100). 
 
@@ -379,7 +379,7 @@ sign. Overflow never occurs when adding operands with different signs.
   - 3 + (6 ∗ 1) = 9 clock cycles 
 - You are required to understand the pattern in the example and implement it. ![ref1]
 
-![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.028.png)
+![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.028.png)
 
 ***Deliverables*** 
 
@@ -396,7 +396,7 @@ The following guidelines must be followed in all packages:
 
    Examples: 
 
-Fetch(); ![](Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.029.png)
+Fetch(); ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.029.png)
 
 Decode(); 
 
