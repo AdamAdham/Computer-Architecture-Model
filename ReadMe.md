@@ -94,7 +94,8 @@ The following guidelines must be followed in all packages:
 
    Examples: 
 
-Fetch(); ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.029.png)
+``` C
+Fetch();
 
 Decode(); 
 
@@ -105,6 +106,8 @@ Execute;
 // writeback(); 
 
 Cycle++ 
+
+```
 
 **Printings** 
 
