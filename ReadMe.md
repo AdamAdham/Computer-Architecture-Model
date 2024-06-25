@@ -1,6 +1,6 @@
 ﻿**Faculty of Media Engineering and Technology  ![](ReadMe-Images/ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.001.png)Computer Systems Architecture – CSEN601**  
 
-***Project ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.002.png)General Description ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.003.png)***
+***Project General Description***
 
 ***Project Overview*** 
 
