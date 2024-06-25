@@ -18,7 +18,7 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
 
 ` `Von Neumann Architecture is a digital computer architecture whose design is based on the concept of stored program computers where program data and instruction data are stored in the same memory. 
 
-2) **Memory Size**: 2048 \* 32 ![ref1]
+2) **Memory Size**: 2048 \* 32
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.005.png)
 
@@ -42,14 +42,7 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
 *Instruction Set Architecture* 
 
 1) Instruction Size: 32 bits 
-1) Instruction Types: 3 ![ref1]
-
-![ref2]
-
-![ref3]
-
-![ref4]
-
+1) Instruction Types: 3
 3) Instruction Count: 12 
 - The opcodes are from 0 to 11 according to the instructions order in the following table: 
 
@@ -67,14 +60,14 @@ Package 1: Spicy Von Neumann Fillet with extra shifts *Memory Architecture*
 - **Instruction Decode (ID):** Decodes the instruction and reads any operands required from the register file. 
 - **Execute (EX):** Executes the instruction. In fact, all ALU operations are done in this stage. 
 - **Memory (MEM):** Performs any memory access required by the current instruction. For loads, it would load an operand from the main memory, while for stores, it would store an operand into the main memory. 
-- **Write Back (WB):** For instructions that have a result (a destination register), the Write Back writes this result back to the register file. ![ref1]
+- **Write Back (WB):** For instructions that have a result (a destination register), the Write Back writes this result back to the register file.
 2) Pipeline: 4 instructions (maximum) running in parallel 
 - **Instruction Fetch (IF)** and **Memory (MEM)** can not be done in parallel since they access the same physical memory. 
 - At a given clock cycle, you can either have the **IF**, **ID**, **EX**, **WB** stages active, or the **ID**, **EX**, **MEM**, **WB** stages active. 
 - Number of clock cycles: 7 + ((n − 1) ∗ 2), where n = number of instructions 
 - Imagine a program with 7 instructions: 
   - 7 + (6 ∗ 2) = 19 clock cycles 
-- You are required to understand the pattern in the example and implement it. ![ref1]
+- You are required to understand the pattern in the example and implement it.
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.010.jpeg)
 
@@ -100,7 +93,7 @@ Package 2: Double McHarvard with cheese circular shifts *Memory Architecture*
 - The instruction memory addresses are from 0 to 2^10 − 1 (0 to 1023). 
 - Each memory block (row) contains 1 word which is 16 bits (2 bytes). 
 - The instruction memory is word addressable. 
-- The program instructions are stored in the instruction memory ![ref1]
+- The program instructions are stored in the instruction memory
 3) Data Memory Size: 2048 \* 8 
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.012.png)
@@ -125,7 +118,7 @@ Package 2: Double McHarvard with cheese circular shifts *Memory Architecture*
 of the most significant bit position. 
 
 - Check on 9th bit (bit 8) of UNSIGNED[VALUE1] OP UNSIGNED[VALUE2] ==1 or not. 
-- Two’s Complement Overflow Flag (V): Indicates when the result of a signed number operation is too large, causing the high-order bit to overflow into the sign bit. ![ref1]
+- Two’s Complement Overflow Flag (V): Indicates when the result of a signed number operation is too large, causing the high-order bit to overflow into the sign bit.
 - If 2 numbers are added, and they both have the same sign (both positive or both 
 
 negative), then overflow occurs (V = 1) if and only if the result has the opposite sign. Overflow never occurs when adding operands with different signs. 
@@ -186,7 +179,7 @@ table:
 - **Instruction Decode (ID):** Decodes the instruction and reads any operands required from the register file. 
 - **Execute (EX):** Executes the instruction. In fact, all ALU operations are done in this stage. 
 
-Moreover, it performs any memory access required by the current instruction. For loads, it would load an operand from the main memory, while for stores, it would store an ![ref1] operand into the main memory. Finally, for instructions that have a result (a destination register), it writes this result back to the register file. 
+Moreover, it performs any memory access required by the current instruction. For loads, it would load an operand from the main memory, while for stores, it would store an operand into the main memory. Finally, for instructions that have a result (a destination register), it writes this result back to the register file. 
 
 2) **Number of clock cycles:** 3 + ((n − 1) ∗ 1), where n = number of instructions 
 - Imagine a program with 7 instructions: 
@@ -199,7 +192,7 @@ Package 3: Fillet-O-Neumann with moves on the side *Memory Architecture*
 
 1) Architecture: Von Neumann 
 - Von Neumann Architecture is a digital computer architecture whose design is based on the concept of stored program computers where program data and instruction data are stored in the same memory. 
-2) Memory Size: 2048 \* 32 ![ref1]
+2) Memory Size: 2048 \* 32
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.018.png)
 
@@ -225,14 +218,14 @@ Package 3: Fillet-O-Neumann with moves on the side *Memory Architecture*
 1) Instruction Size: 32 bits 
 1) Instruction Types: 3 
 
-![ref2]
 
-![ref3]
 
-![ref4]
+
+
+
 
 3) Instruction Count: 12 
-- The opcodes are from 0 to 11 according to the instructions order in the following table: ![ref1]
+- The opcodes are from 0 to 11 according to the instructions order in the following table:
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.019.png)
 
@@ -278,7 +271,7 @@ Back writes this result back to the register file.
 - An instruction stays in the Execute (EX) stage for 2 clock cycles. 
 - An instruction stays in the Memory (MEM) stage for 1 clock cycle. 
 - An instruction stays in the Write Back (WB) stage for 1 clock cycle. 
-- You can not have the Instruction Fetch (IF) and Memory (MEM) stages working in parallel. Only one of them is active at a given clock cycle. ![ref1]
+- You can not have the Instruction Fetch (IF) and Memory (MEM) stages working in parallel. Only one of them is active at a given clock cycle.
 
 Package 4: Double Big Harvard combo large arithmetic shifts *Memory Architecture* 
 
@@ -299,7 +292,7 @@ Package 4: Double Big Harvard combo large arithmetic shifts *Memory Architecture
 - The data memory addresses are from 0 to 2^11 − 1 (0 to 2047). 
 - Each memory block (row) contains 1 word which is 8 bits (1 byte). 
 - The data memory is word/byte addressable (1 word = 1 byte). 
-- The data is stored in the data memory. ![ref1]
+- The data is stored in the data memory.
 4) Registers: 66 
 - Size: 8 bits 
 - 64 General-Purpose Registers (GPRS) 
@@ -335,7 +328,7 @@ sign. Overflow never occurs when adding operands with different signs.
 - Zero Flag (Z): Indicates that the result of an arithmetic or logical operation was zero. 
   - Z = 1 if result is 0. 
   - Z = 0 if result is not 0. 
-- Since all registers are 8 bits, and we are only using 5 bits in the Status Register for the flags, you are required to keep Bits7:5 cleared “0” at all times in the register. ![ref1]
+- Since all registers are 8 bits, and we are only using 5 bits in the Status Register for the flags, you are required to keep Bits7:5 cleared “0” at all times in the register.
 - 1 Program Counter 
 - Name: PC 
 - Type: Special-purpose register with a size of 16 bits (not 8 bits). 
@@ -359,7 +352,7 @@ sign. Overflow never occurs when adding operands with different signs.
 “||” symbol indicates concatenation (0100 || 1100 = 01001100). 
 
 4) The Status Register (SREG) flags are affected by the following instructions:
-- The Carry flag (C) is updated every ADD instruction.![ref1]
+- The Carry flag (C) is updated every ADD instruction
 - The Overflow flag (V) is updated every ADD and SUB instruction.
 - The Negative flag (N) is updated every ADD, SUB, MUL, ANDI, EOR, SAL, and SAR instruction.
 - The Sign flag (S) is updated every ADD and SUB instruction.
@@ -377,7 +370,7 @@ sign. Overflow never occurs when adding operands with different signs.
 - Number of clock cycles: 3 + ((n − 1) ∗ 1), where n = number of instructions 
 - Imagine a program with 7 instructions: 
   - 3 + (6 ∗ 1) = 9 clock cycles 
-- You are required to understand the pattern in the example and implement it. ![ref1]
+- You are required to understand the pattern in the example and implement it.
 
 ![](ReadMe-Images/Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.028.png)
 
@@ -417,7 +410,7 @@ The following items must be printed in the console after each Clock Cycle:
 - Which instruction is being executed at each stage? 
 - What are the input parameters/values for each stage? 
 1) The updates occurring to the registers in case a register value was changed. 
-1) The updates occurring in the memory (data segment of main memory or data memory according to your package) in case a value was stored or updated in the memory. ![ref1]
+1) The updates occurring in the memory (data segment of main memory or data memory according to your package) in case a value was stored or updated in the memory.
 3) The content of all registers after the last clock cycle. 
 3) The full content of the memory (main memory or instruction and data memories according to your package) after the last clock cycle. 
 
@@ -446,7 +439,7 @@ Please read the following instructions carefully:
 ***Submission Guidelines*** 
 
 - The submission deadline for submission is **Thursday 16 May 2024 at 11:59 PM** 
-- You are requested to submit the following documents: The below deliverables are the ones that will be described in the deliverables section, and below is just examples of the deliverables and the naming convention (video and report is a MUST, we can add extra deliverables which are codes etc) ![ref1]
+- You are requested to submit the following documents: The below deliverables are the ones that will be described in the deliverables section, and below is just examples of the deliverables and the naming convention (video and report is a MUST, we can add extra deliverables which are codes etc)
 1. A 1-min video to demonstrate the working code (please narrate and comment on the results)**  
 - **name the Video (Project\_Team\_m\_Video.mp4)** 
 2. The required project description report (kindly include in the cover page the team number, team name, package number and name, and team members’ names, IDs, and tutorials). 
@@ -474,10 +467,10 @@ The project will be graded upon multiple criteria for each of the submitted deli
 - The overall functionality of the project. 
 - Each technical aspect of the project will be graded as well. 
 - The quality of the submission (for example: well-commented and generic code, comprehensive and well-written reports, clear and comprehensive videos, and others). 
-- Submission on time with no delays (late submissions will be subject to deduction). ![ref1]
+- Submission on time with no delays (late submissions will be subject to deduction).
 - The evaluation attendance is obligatory for all members and graded upon only the showing up. 
 - There is a collective team grade, yet during the evaluation and based on your discussion and answers, individual grades will be added as well. 
-- Note extra bonus marks will be added in case of successfully merging the computer systems course project and the operating systems course project (maximum bonus is 1.75% to be added to the total 100% course grade) ![ref1]
+- Note extra bonus marks will be added in case of successfully merging the computer systems course project and the operating systems course project (maximum bonus is 1.75% to be added to the total 100% course grade)
 ***CSEN 601 – Spring 24***  19/19 
 
 [ref1]: Aspose.Words.af7bb3c6-0057-461e-a1c8-6f4e3ff06082.004.png
