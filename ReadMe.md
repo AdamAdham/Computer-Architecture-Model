@@ -38,6 +38,184 @@ The project uses **C programming** for simulating the processor, parsing assembl
 
 ---
 
+Below is a **drop-in section** you can append to your README.
+It is written in the **same confident, portfolio-style tone**, and explains **directories + each file clearly**, without sounding like coursework.
+
+You can paste it **after “Project Overview” or before “Deliverables”**.
+
+---
+
+## Project Structure & Code Organization
+
+<details>
+<summary>Directory Layout</summary>
+
+```
+├── include/
+│   ├── cpu.h
+│   ├── cpu_state.h
+│   ├── instruction_utils.h
+│   ├── loader.h
+│   ├── memory.h
+│   └── pipeline_utils.h
+│
+├── src/
+│   ├── main.c
+│   ├── cpu.c
+│   ├── cpu_state.c
+│   ├── instruction_utils.c
+│   ├── loader.c
+│   └── pipeline_utils.c
+│
+└── instrTest.txt
+```
+
+</details>
+
+---
+
+## Directory Responsibilities
+
+### `include/` — Public Interfaces (Headers)
+
+This directory contains **all public interfaces** of the processor simulator.
+Each header exposes function prototypes, shared data structures, and global state declarations (`extern`) used across modules.
+
+Headers are intentionally **logic-free**, ensuring clean separation between interface and implementation.
+
+---
+
+### `src/` — Implementation
+
+This directory contains the **actual processor simulation logic**, split into cohesive modules that mirror real processor subsystems.
+
+---
+
+## File-Level Breakdown
+
+### `main.c`
+
+**Role:** Program entry point and simulation launcher.
+
+**Responsibilities:**
+
+* Allocates main memory
+* Initializes processor state
+* Loads assembly instructions
+* Starts the clock-cycle simulation
+* Prints final register and memory state
+
+> `main.c` does **not** implement CPU logic.
+> It orchestrates execution by calling into the CPU and pipeline modules.
+
+---
+
+### `cpu.h / cpu.c`
+
+**Role:** Core processor execution and pipeline control.
+
+**Responsibilities:**
+
+* Implements the processor pipeline stages:
+
+  * Fetch
+  * Decode
+  * Execute
+  * Memory
+  * Write Back
+* Controls clock-cycle progression
+* Enforces pipeline constraints:
+
+  * Limited parallelism (4 instructions max)
+  * Memory access conflicts (IF vs MEM)
+  * Stalling and flushing behavior
+
+This module represents the **heart of the processor simulation**.
+
+---
+
+### `cpu_state.h / cpu_state.c`
+
+**Role:** Global processor state and architectural data.
+
+**Responsibilities:**
+
+* Program Counter (PC)
+* Register file (R0–R31)
+* Instruction memory & data memory
+* Pipeline tracking arrays
+* Instruction metadata (`instructionData` struct)
+
+All processor state is **defined once** in `cpu_state.c` and accessed across modules via `extern` declarations.
+
+---
+
+### `instruction_utils.h / instruction_utils.c`
+
+**Role:** Instruction decoding and formatting utilities.
+
+**Responsibilities:**
+
+* Convert binary instructions to human-readable assembly
+* Map opcodes to mnemonic strings
+* Identify instruction categories (LW, SW, branch, jump, etc.)
+* Support debug printing per pipeline stage
+
+This module is used extensively for **logging, debugging, and pipeline tracing**.
+
+---
+
+### `loader.h / loader.c`
+
+**Role:** Instruction loading and assembly parsing.
+
+**Responsibilities:**
+
+* Read assembly instructions from input text file
+* Parse instruction formats (R-type, I-type, J-type)
+* Encode instructions into 32-bit binary format
+* Store instructions into instruction memory
+
+This simulates the **instruction loading phase** of a real processor.
+
+---
+
+### `pipeline_utils.h / pipeline_utils.c`
+
+**Role:** Pipeline control helpers and hazard handling.
+
+**Responsibilities:**
+
+* Instruction flushing after branches/jumps
+* PC manipulation helpers
+* Dependency and hazard-related utilities
+* Bit manipulation helpers (e.g., jump address concatenation)
+
+This module supports **correct pipeline behavior** under control hazards.
+
+---
+
+### `memory.h`
+
+**Role:** Memory interface abstraction.
+
+**Responsibilities:**
+
+* Declares main memory pointer
+* Centralizes memory-related constants and definitions
+* Ensures consistent memory access across modules
+
+---
+
+## Design Philosophy
+
+* **Modular:** Each file maps to a real processor subsystem
+* **Scalable:** Easy to extend with new instructions or pipeline features
+* **Readable:** Debug-friendly with detailed per-cycle output
+* **Professional:** Separation of concerns mirrors real CPU simulators
+
+This structure was intentionally chosen to resemble **industry-grade architectural simulators**, rather than monolithic academic code.
+
 ## Processor Packages
 
 <details>
@@ -182,41 +360,3 @@ Cycle++;
 3. **Overflow without Carry:** 64 + 64 = 128 → Overflow = 1, Carry = 0
 
 </details>
-
----
-
-## Deliverables
-
-<details>
-<summary>Required Deliverables</summary>
-
-1. **Video Demonstration** (1 minute, narrate code execution)
-
-   * File name: `Project_Team_m_Video.mp4`
-2. **Project Report**
-
-   * Cover page: team number, package number, team members
-   * File name: `Project_Team_m_Report.pdf`
-3. **Source Code**
-
-   * Includes C code, CMakeLists.txt, and libraries
-   * File name: `Project_Team_m_Code.zip`
-4. Submit as **single zip file**: `CSEN601_S24_Proj_Package_n_Team_m.zip`
-5. Share via **submission form** ensuring access permissions
-
-</details>
-
----
-
-## Evaluation and Grading
-
-<details>
-<summary>Evaluation Criteria</summary>
-
-* Functionality of the processor simulation
-* Technical accuracy of pipeline, memory, and instruction execution
-* Quality of code (well-commented, modular)
-* Report clarity and completeness
-* Video demonstration clarity
-* Timely submission
-* Individual participation during evaluation
