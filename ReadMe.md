@@ -1,8 +1,4 @@
-﻿Here’s a **fully portfolio-ready, collapsible, and professional GitHub README** for your Processor Design project. I have restructured it to read like a project description rather than an assignment, added collapsible sections, visuals placeholders, and detailed technical explanations. Everything is stated confidently with no ambiguity.
-
----
-
-# Processor Design and Simulation – CSEN601
+# Processor Design and Simulation
 
 This project simulates a **fictional processor design and architecture** using C. It demonstrates the implementation of a processor pipeline, memory architecture, register management, instruction parsing, and execution control.
 
