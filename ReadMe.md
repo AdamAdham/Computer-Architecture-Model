@@ -34,13 +34,6 @@ The project uses **C programming** for simulating the processor, parsing assembl
 
 ---
 
-Below is a **drop-in section** you can append to your README.
-It is written in the **same confident, portfolio-style tone**, and explains **directories + each file clearly**, without sounding like coursework.
-
-You can paste it **after “Project Overview” or before “Deliverables”**.
-
----
-
 ## Project Structure & Code Organization
 
 <details>
